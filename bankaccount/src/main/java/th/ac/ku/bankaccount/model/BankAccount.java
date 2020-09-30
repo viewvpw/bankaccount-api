@@ -7,12 +7,10 @@ import javax.persistence.Id;
 
 @Entity
 public class BankAccount {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    private int customer;
+    private int customerId;
     private String type;
     private double balance;
 
@@ -24,12 +22,12 @@ public class BankAccount {
         this.id = id;
     }
 
-    public int getCustomer() {
-        return customer;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(int customer) {
-        this.customer = customer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getType() {
@@ -52,7 +50,7 @@ public class BankAccount {
     public String toString() {
         return "BankAccount{" +
                 "id=" + id +
-                ", customer=" + customer +
+                ", customerId=" + customerId +
                 ", type='" + type + '\'' +
                 ", balance=" + balance +
                 '}';
